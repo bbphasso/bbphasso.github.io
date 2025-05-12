@@ -1,0 +1,20 @@
+[
+  {
+    "id": "seminaire1",
+    "title": "Séminaire sur le développement web",
+    "start": "2025-04-10T10:00:00",
+    "end": "2025-04-10T12:00:00",
+    "author": "John Doe",
+    "summary": "Un séminaire pour découvrir les bases du développement web.",
+    "googleDriveLink": "https://drive.google.com/file/d/12345/view"
+  },
+  {
+    "id": "seminaire2",
+    "title": "Conférence sur le JavaScript avancé",
+    "start": "2025-04-15T14:00:00",
+    "end": "2025-04-15T16:00:00",
+    "author": "Jane Smith",
+    "summary": "Explorez les techniques avancées en JavaScript.",
+    "googleDriveLink": "https://drive.google.com/file/d/67890/view"
+  }
+]

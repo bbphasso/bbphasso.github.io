@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>BBPH Asso</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header dynamically loaded-->
+								<div id="header-container"></div>
+
+							<!-- Banner -->
+								<section id="banner">
+                                    <div class="container">
+                                        <h1 id="seminaire-title"></h1>
+                                        <p><strong>Auteur:</strong> <span id="seminaire-author"></span></p>
+                                        <p><strong>Résumé:</strong> <span id="seminaire-summary"></span></p>
+                                        <p><strong>Accès au document:</strong> <a id="seminaire-link" href="#" target="_blank">Cliquez ici</a></p>
+                                        </div>
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+				<div id="sidebar-container"></div>
+
+			</div>
+
+		<!-- Scripts -->
+		<script>
+			// Charger la sidebar avant de lancer le script principal
+			fetch('sidebar.html')
+				.then(response => response.text())
+				.then(html => {
+					// Injecter le contenu de la sidebar
+					document.getElementById('sidebar-container').innerHTML = html;
+
+					// Charger et exécuter main.js après l'injection
+					const script = document.createElement('script');
+					script.src = 'assets/js/main.js';  // Ajoute ton script principal
+					script.defer = true;  // Assure-toi que le script est exécuté après l'injection
+					document.body.appendChild(script);
+				})
+				.catch(error => console.error("Erreur lors du chargement de la sidebar :", error));
+		</script>
+		<script>
+			// Charger le header avant de lancer le script principal
+			fetch('header.html')
+				.then(response => response.text())
+				.then(html => {
+					// Injecter le contenu du header
+					document.getElementById('header-container').innerHTML = html;
+	
+					// Charger la sidebar
+					return fetch('sidebar.html');
+				})
+				.then(response => response.text())
+				.then(html => {
+					// Injecter le contenu de la sidebar
+					document.getElementById('sidebar-container').innerHTML = html;
+	
+					// Charger et exécuter main.js après l'injection
+					const script = document.createElement('script');
+					script.src = 'assets/js/main.js';  // Ajoute ton script principal
+					script.defer = true;  // Assure-toi que le script est exécuté après l'injection
+					document.body.appendChild(script);
+				})
+				.catch(error => console.error("Erreur lors du chargement du header ou de la sidebar :", error));
+		</script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var urlParams = new URLSearchParams(window.location.search);
+                var eventId = urlParams.get('id');
+                
+                fetch('data/events.json')
+                    .then(response => response.json())
+                    .then(events => {
+                        var event = events.find(e => e.id === eventId);
+                        if (event) {
+                            document.getElementById('seminaire-title').innerText = event.title;
+                            document.getElementById('seminaire-author').innerText = event.author;
+                            document.getElementById('seminaire-summary').innerText = event.summary;
+                            document.getElementById('seminaire-link').href = event.googleDriveLink;
+                        }
+                    })
+                    .catch(error => console.error('Erreur lors de la récupération des événements:', error));
+            });
+        </script>
+		<!-- Les scripts JS nécessaires à la page -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
+	</body>
+</html>

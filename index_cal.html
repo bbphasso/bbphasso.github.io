@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/fonts/icomoon/style.css">
+  
+    <link href='fullcalendar/packages/core/main.css' rel='stylesheet' />
+    <link href='fullcalendar/packages/daygrid/main.css' rel='stylesheet' />
+    
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/main.css">
+	
+    <title>BBPH Asso</title>
+
+  </head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<div id="header-container"></div>
+
+							<!-- Banner -->
+								<section id="banner">
+									<div id='calendar-container'>
+										<div id='calendar'></div>
+									</div>
+								</section>
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar-container"></div>
+			</div>
+		<!-- Footnote -->
+			<div id="footer-container"></div>
+		<!-- Scripts -->
+			<!-- Load layout -->
+			<script src="scripts/layout_loader.js"></script>
+
+
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="js/popper.min.js"></script>
+			<script src="js/bootstrap.min.js"></script>
+
+			<script src='fullcalendar/packages/core/main.js'></script>
+			<script src='fullcalendar/packages/interaction/main.js'></script>
+			<script src='fullcalendar/packages/daygrid/main.js'></script>
+			<script src='fullcalendar/packages/timegrid/main.js'></script>
+			<script src='fullcalendar/packages/list/main.js'></script>
+
+			<script>
+				document.addEventListener('DOMContentLoaded', function () {
+				var calendarEl = document.getElementById('calendar');
+		
+				fetch('data/events.json')
+					.then(response => response.json())
+					.then(events => {
+					var calendar = new FullCalendar.Calendar(calendarEl, {
+						plugins: ['interaction', 'dayGrid', 'timeGrid', 'list'],
+						height: 'auto',
+						header: {
+						left: 'prev,next today',
+						center: 'title',
+						right: 'dayGridMonth,listYear'
+						},
+						defaultView: 'dayGridMonth',
+						navLinks: true,
+						editable: false,
+						eventLimit: true,
+						events: events.map(event => {
+						return {
+							title: event.title,
+							start: event.start,
+							url: 'seminaire.html?id=' + event.id  // Redirection vers seminaires.html avec un paramètre d'ID
+						};
+						}),
+						eventClick: function(info) {
+						// L'URL contient l'ID du séminaire, redirige vers la page correspondante
+						window.location.href = info.event.extendedProps.url;
+						}
+					});
+		
+					calendar.render();
+					})
+					.catch(error => console.error("Erreur lors du chargement des événements :", error));
+				});
+				</script>
+		
+		
+				</script>
+		
+			<script src="js/main.js"></script>
+	</body>
+</html>

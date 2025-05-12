@@ -1,0 +1,32 @@
+name: Push Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  push-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        persist-credentials: false 
+
+    - name: Modifier un fichier (exemple)
+      run: |
+        echo "modif à $(date)" >> data/test.txt
+
+    - name: Config Git
+      run: |
+        git config --global user.name "GitHub Action"
+        git config --global user.email "action@github.com"
+
+    - name: Push avec PAT
+      env:
+        TOKEN: ${{ secrets.TEST_TOKEN }}
+      run: |
+        git add .
+        git commit -m "Test auto push" || echo "Rien à commit"
+        git remote remove origin
+        git push https://x-access-token:$TOKEN@github.com/${{ github.repository }} HEAD:main

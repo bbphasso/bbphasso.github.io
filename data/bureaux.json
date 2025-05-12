@@ -1,0 +1,89 @@
+[
+    {
+        "id": "bureau1",
+        "title": "Bureau 2023 - 2024",
+        "presidence": [
+            "John Doe",
+            "Michel Obama"
+            ],
+        "tresorerie": [
+            "John Doe",
+            "Michel Obama"
+            ],
+        "secretariat": [
+            "John Doe"
+            ],
+        "communication": [
+            "John Doe",
+            "Michel Obama"
+            ],
+        "scientifique": [
+            "John Doe",
+            "Michel Obama",
+            "David Guetta"
+            ],
+        "evenements": [
+            "Explorez les techniques avancées en JSON.",
+            "Comment manger des poireaux"
+            ],
+        "photo": "images/defaut.jpg"
+    },
+    {
+        "id": "bureau2",
+        "title": "Bureau 2024 - 2025",
+        "presidence": [
+            "John Doe",
+            "Michel Obama"
+            ],
+        "tresorerie": [
+            "John Doe",
+            "Michel Obama"
+            ],
+        "secretariat": [
+            "John Doe"
+            ],
+        "communication": [
+            "John Doe",
+            "Michel Obama"
+            ],
+        "scientifique": [
+            "John Doe",
+            "Michel Obama",
+            "David Guetta"
+            ],
+        "evenements": [
+            "Explorez les techniques avancées en YAML YEAHH",
+            "Comment manger des petits pois"
+            ],
+        "photo": "images/defaut.jpg"
+    },
+    {
+        "id": "bureau3",
+        "title": "Bureau 2025 - 2026",
+        "presidence": [
+            "John Doe",
+            "Michel Obama"
+            ],
+        "tresorerie": [
+            "John Doe",
+            "Michel Obama"
+            ],
+        "secretariat": [
+            "John Doe"
+            ],
+        "communication": [
+            "John Doe",
+            "Michel Obama"
+            ],
+        "scientifique": [
+            "John Doe",
+            "Michel Obama",
+            "David Guetta"
+            ],
+        "evenements": [
+                "Explorez les techniques avancées en JavaScript.",
+                "Comment manger des patates"
+            ],
+        "photo": "images/defaut.jpg"
+      }
+  ]

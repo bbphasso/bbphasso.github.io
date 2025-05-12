@@ -1,0 +1,37 @@
+name: Update LinkedIn JSON
+
+# Déclenchement automatique tous les jours à 6h UTC, ou à la main
+on:
+  schedule:
+    - cron: '0 6 * * 1'  # tous les lundis à 6h UTC
+  workflow_dispatch:      # bouton manuel dans GitHub Actions
+
+jobs:
+  update-json:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Cloner le repo
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false # a MUST HAVE
+
+      - name: Installer Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Installer feedparser
+        run: pip install feedparser
+
+      - name: Exécuter le script Python
+        run: python scripts/fetch_linkedin_rss.py
+
+      - name: Commit & push si modification
+        run: |
+          git config --global user.name "quentinlaval"
+          git config --global user.email "no-reply@example.com"
+          git add data/linkedin-posts.json
+          git commit -m "Mise à jour auto des posts LinkedIn" || echo "Aucun changement"
+          git remote set-url origin "https://x-access-token:${{ secrets.TEST_TOKEN }}@github.com/${{ github.repository }}"
+          git push origin HEAD:main
