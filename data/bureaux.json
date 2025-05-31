@@ -3,28 +3,29 @@
         "id": "bureau1",
         "title": "Bureau 2023 - 2024",
         "presidence": [
-            "John Doe",
-            "Michel Obama"
+            "Ilana Caro",
+            "Coralie Delgado"
             ],
         "tresorerie": [
-            "John Doe",
-            "Michel Obama"
+            "Manel Rakez",
+            "Blandine Gendre"
             ],
         "secretariat": [
-            "John Doe"
+            "Constance Bordes"
             ],
         "communication": [
-            "John Doe",
-            "Michel Obama"
+            "Kateline Le Bourdonnec"
             ],
         "scientifique": [
-            "John Doe",
-            "Michel Obama",
-            "David Guetta"
+            "Jeanne Bardinet",
+            "Morgane Menant",
+            "Jeanne Neuffer"
             ],
         "evenements": [
-            "Explorez les techniques avancées en JSON.",
-            "Comment manger des poireaux"
+            "Un Séminaire interdisciplinaire `Elargissons la recherche`",
+            "Un Séminaire `Quid du privé ?`",
+            "Un Séminaire `Et si on travaillait ensemble ?`",
+            "20 MJC, 2 soirées, une préparation au concours de l'EDSP2 et entraînements soutenances pour les stagiaires de M2"
             ],
         "photo": "images/defaut.jpg"
     },
@@ -32,28 +33,29 @@
         "id": "bureau2",
         "title": "Bureau 2024 - 2025",
         "presidence": [
-            "John Doe",
-            "Michel Obama"
+            "Léa Faure",
+            "Blondy Kayembe Mulumba"
             ],
         "tresorerie": [
-            "John Doe",
-            "Michel Obama"
+            "Floriane Samaria",
+            "Mélanie Huchon"
             ],
         "secretariat": [
-            "John Doe"
+            "Ima Bernada"
             ],
         "communication": [
-            "John Doe",
-            "Michel Obama"
+            "Amélie Bouche",
+            "Auriane Gabaut"
             ],
         "scientifique": [
-            "John Doe",
-            "Michel Obama",
-            "David Guetta"
+            "Yvanna Simon",
+            "Océane Pic",
+            "Marie-Anne Pietrowski"
             ],
         "evenements": [
-            "Explorez les techniques avancées en YAML YEAHH",
-            "Comment manger des petits pois"
+            "Séminaire `Bien s'informer en Santé publique` avec Geneviève Chêne et Priscille Rivière",
+            "Séminaire `Société et chercheurs : co-construire la sciende de demaine` avec Cécile Walter et Florence Francis-Oliviero",
+            "23 MJC réalisés, 4 auberges espagnoles, 3 soirées, une préparation au concours de l'EDSP2 et entraînements soutenances pour les stagiaires de M2"
             ],
         "photo": "images/defaut.jpg"
     },
@@ -61,29 +63,28 @@
         "id": "bureau3",
         "title": "Bureau 2025 - 2026",
         "presidence": [
-            "John Doe",
-            "Michel Obama"
+            "Anne-Andrée Ruiz",
+            "Antonin Colajanni"
             ],
         "tresorerie": [
-            "John Doe",
-            "Michel Obama"
+            "Quentin Laval",
+            "Daniela Gouna"
             ],
         "secretariat": [
-            "John Doe"
+            "Nicolas Bloespfug"
             ],
         "communication": [
-            "John Doe",
-            "Michel Obama"
+            "Natacha Lebrun",
+            "Antonin Colajanni"
             ],
         "scientifique": [
-            "John Doe",
-            "Michel Obama",
-            "David Guetta"
+            "Virginie Faidherbe",
+            "Tom Fischer",
+            "Raphaël Garcia"
             ],
         "evenements": [
-                "Explorez les techniques avancées en JavaScript.",
-                "Comment manger des patates"
+                "En cours d'organisation"
             ],
-        "photo": "images/defaut.jpg"
+        "photo": "images/Bureaux/Bureau_2025_2026.JPG"
       }
   ]

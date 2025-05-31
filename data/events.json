@@ -1,20 +1,74 @@
 [
   {
     "id": "seminaire1",
-    "title": "Séminaire sur le développement web",
-    "start": "2025-04-10T10:00:00",
-    "end": "2025-04-10T12:00:00",
-    "author": "John Doe",
-    "summary": "Un séminaire pour découvrir les bases du développement web.",
-    "googleDriveLink": "https://drive.google.com/file/d/12345/view"
+    "title": "MJC salle Mann",
+    "start": "2025-04-16T12:00:00",
+    "end": "2025-04-10T12:30:00",
+    "author": "Clément Bigeard",
+    "summary": "Le concept One Health en action sur le virus West Nile : Développement d’actions de recherche opérationnelle en lien avec les acteurs de santé publique de Nouvelle-aquitaine"
   },
   {
     "id": "seminaire2",
-    "title": "Conférence sur le JavaScript avancé",
-    "start": "2025-04-15T14:00:00",
-    "end": "2025-04-15T16:00:00",
-    "author": "Jane Smith",
-    "summary": "Explorez les techniques avancées en JavaScript.",
-    "googleDriveLink": "https://drive.google.com/file/d/67890/view"
+    "title": "MJC salle Pous",
+    "start": "2025-04-23T12:00:00",
+    "end": "2025-04-23T12:30:00",
+    "author": "Cléia",
+    "summary": "Digital Health Technologies to Optimize the Use of Treatment Decision Algorithms (TDAs) for Childhood Tuberculosis at lower levels of healthcare settings"
+  },
+  {
+    "id": "seminaire3",
+    "title": "MJC salle Pous, répétition pour EPICLIN",
+    "start": "2025-05-07T12:00:00",
+    "end": "2025-05-07T12:30:00",
+    "author": "Vincent Bouteloup & Alexandre Catherineau",
+    "summary": "Vincent : Approches statistiques en cas de changement de technique de détermination pour l’étude longitudinale de biomarqueurs : expérience de la cohorte MEMENTO;\n Alexandre : Développement d’un algorithme pour estimer l’utilité à partir des données du Système National des Données de Santé"
+  },
+  {
+    "id": "seminaire4",
+    "title": "Séminaire salle ED23",
+    "start": "2025-05-13T13:00:00",
+    "end": "2025-05-13T14:30:00",
+    "author": "Geneviève Chêne & Priscille Rivière",
+    "summary": "Bien s'informer en Santé Publique",
+    "image": "images/Images_seminaires/event_130525.jpg"
+  },
+  {
+    "id": "seminaire5",
+    "title": "MJC salle Pous",
+    "start": "2025-05-28T12:00:00",
+    "end": "2025-05-28T12:30:00",
+    "author": "Blandine Le Provost",
+    "summary": "Long-term PM and NO2 air pollution exposure patterns and their association with breast cancer risk"
+  },
+  {
+    "id": "seminaire6",
+    "title": "Soirée de passation",
+    "start": "2025-06-12T19:00:00",
+    "end": "2025-06-12T23:59:59",
+    "summary": "Soirée afin de faire connaître le nouveau bureau et d'entretenir la convivialité au sein des adhérents.",
+    "image": "images/Images_seminaires/event_120625.png"
+  },
+  {
+    "id": "seminaire7",
+    "title": "Entraînement oral M2 salle S52",
+    "start": "2025-06-04T12:00:00",
+    "end": "2025-06-04T13:00:00",
+    "author": "Reese Li",
+    "summary": "Soon available"
+  },
+  {
+    "id": "seminaire8",
+    "title": "MJC salle Pous",
+    "start": "2025-06-11T12:00:00",
+    "end": "2025-06-11T12:30:00",
+    "author": "Romane Le Goff",
+    "summary": "Soon available"
+  },
+    {
+    "id": "seminaire9",
+    "title": "Auberge espagnole",
+    "start": "2025-06-18T12:00:00",
+    "end": "2025-06-18T13:00:00",
+    "summary": "Chacun ramène à manger pour partager un moment convivial en extérieur"
   }
 ]

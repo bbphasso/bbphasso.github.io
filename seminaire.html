@@ -23,8 +23,9 @@
                                     <div class="container">
                                         <h1 id="seminaire-title"></h1>
                                         <p><strong>Auteur:</strong> <span id="seminaire-author"></span></p>
-                                        <p><strong>Résumé:</strong> <span id="seminaire-summary"></span></p>
+                                        <p><strong>Résumé:</strong><br> <span id="seminaire-summary"></span></p>
                                         <p><strong>Accès au document:</strong> <a id="seminaire-link" href="#" target="_blank">Cliquez ici</a></p>
+										<div id="seminaire-image-container"></div>
                                         </div>
 								</section>
 
@@ -37,6 +38,7 @@
 			</div>
 
 		<!-- Scripts -->
+
 		<script>
 			// Charger la sidebar avant de lancer le script principal
 			fetch('sidebar.html')
@@ -88,9 +90,31 @@
                         var event = events.find(e => e.id === eventId);
                         if (event) {
                             document.getElementById('seminaire-title').innerText = event.title;
-                            document.getElementById('seminaire-author').innerText = event.author;
+                            //document.getElementById('seminaire-author').innerText = event.author;
                             document.getElementById('seminaire-summary').innerText = event.summary;
-                            document.getElementById('seminaire-link').href = event.googleDriveLink;
+                            //document.getElementById('seminaire-link').href = event.googleDriveLink;
+							// Afficher l'auteur s'il existe
+							if (event.author) {
+								document.getElementById("seminaire-author").innerText = event.author;
+							} else {
+								document.getElementById("seminaire-author").parentElement.style.display = "none";
+							}
+							// Afficher le lien s'il existe
+							if (event.googleDriveLink) {
+								document.getElementById("seminaire-link").href = event.googleDriveLink;
+							} else {
+								document.getElementById("seminaire-link").parentElement.style.display = "none";
+							}
+							// Afficher l'image si elle existe
+							if (event.image) {
+								const img = document.createElement("img");
+								img.src = event.image;
+								img.alt = "Image du séminaire";
+								img.style.maxWidth = "50%";
+								document.getElementById("seminaire-image-container").appendChild(img);
+							} else {
+								document.getElementById("seminaire-image-container").style.display = "none";
+							}
                         }
                     })
                     .catch(error => console.error('Erreur lors de la récupération des événements:', error));
@@ -102,6 +126,5 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
         <script src="assets/js/main.js"></script>
-
 	</body>
 </html>

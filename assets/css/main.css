@@ -66,11 +66,17 @@ input, select, textarea {
 }
 
 /* Pour les articles */
-.grid {
+.bureau-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 colonnes de largeur égale */
   gap: 40px 20px; /* 40px entre lignes, 20px entre colonnes */
   justify-items: center; /* centre les articles dans leur colonne */
+}
+
+@media screen and (max-width: 736px) {
+  .bureau-grid {
+    grid-template-columns: 1fr; /* 1 colonne sur mobile */
+  }
 }
 
 .bureau {

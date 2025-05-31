@@ -36,7 +36,7 @@
 									</div>
 									<div class="image-container" style="flex: 45; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px;">
 										<h1 style="text-align: center;">Prochain événement</h1>
-										<img src="images/futur_seminaire.jpg" alt="" style="max-height: 600px; width: auto;"/>
+										<img src="images/futur_seminaire.png" alt="" style="max-height: 600px; width: auto;"/>
 									</div>
 								</section>
 								<hr class="separator">
@@ -54,9 +54,9 @@
 									<header class="major">
 										<h2>Bureau actuel</h2>
 									</header>
-									<div class="grid">
+									<div class="bureau-grid">
 											<article class="bureau">
-												<img src="images/icones/icon_presidence.png" alt="Icône" class="feature-icon"/>
+												<img src="images/icones/icon_presidence.jpg" alt="Icône" class="feature-icon"/>
 												<div class="content">
 													<h3>Présidence</h3>
 													<ul>
@@ -73,7 +73,6 @@
 														<li><a href="https://www.linkedin.com/in/virginie-faidherbe-11b602343/" target="_blank">Virginie Faidherbe</a></li>
 														<li><a href="https://www.linkedin.com/in/tom-fischer-975b461a2/" target="_blank">Tom Fischer</a></li>
 														<li><a href="https://www.linkedin.com/in/raphaelgarcia33/" target="_blank">Raphaël Garcia</a></li>
-														<li><a href="https://www.linkedin.com/in/blandine-le-provost-7b9a8b196/" target="_blank">Blandine Leprovost</a></li>
 													</ul>
 												</div>
 											</article>
@@ -191,7 +190,7 @@
 			<!-- Script automatique posts LinkedIn -->
 			<script>
 				document.addEventListener('DOMContentLoaded', function () {
-					fetch('data/linkedin_posts.json')
+					fetch('data/linkedin-posts.json')
 						.then(response => response.json())
 						.then(posts => {
 							// Trier les articles du plus récent au plus ancien
