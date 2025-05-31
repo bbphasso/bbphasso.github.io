@@ -1942,13 +1942,17 @@ button,
   transition: margin-left 0.5s ease, box-shadow 0.5s ease;
   background-color: #f5f6f7;
   font-size: 0.9em;
-  position: relative;
-  width: 26em; }
+  position: fixed; /* modifié de relative à fixed (comme en max-width:1280px) */
+  width: 24em; /* valeur du max-width:1280px */
+  height: 100%; /* ajouté comme dans max-width:1280px */
+  left: 0; /* ajouté comme dans max-width:1280px */
+  top: 0; /* ajouté comme dans max-width:1280px */
+  z-index: 10000; /* ajouté comme dans max-width:1280px */}
   #sidebar h2 {
     font-size: 1.38889em; }
   #sidebar > .inner {
     padding: 2.22222em 2.22222em 2.44444em 2.22222em ;
-    position: relative;
+    position: fixed;
     width: 26em; }
     #sidebar > .inner > * {
       border-bottom: solid 2px rgba(210, 215, 217, 0.75);
