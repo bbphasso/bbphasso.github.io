@@ -16,7 +16,7 @@ for entry in feed.entries[:3]:
     })
 
 # Générer le fichier JSON
-with open("data/linkedin-posts.json", "w", encoding="utf-8") as f:
-    json.dump(posts, f, ensure_ascii=False, indent=2)
+#with open("data/linkedin-posts.json", "w", encoding="utf-8") as f:
+#    json.dump(posts, f, ensure_ascii=False, indent=2)
 
 print(f"{posts} posts LinkedIn sauvegardés dans data/linkedin-posts.json")
