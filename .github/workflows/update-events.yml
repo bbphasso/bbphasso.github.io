@@ -22,10 +22,8 @@ jobs:
           python-version: '3.11'
 
       - name: Installer dependencies
-        run: pip install requests
-        run: pip install re
-        run: pip install Path
-        run: pip install datetime
+        run: |
+          pip install requests
 
       - name: Exécuter le script Python
         run: python /scripts/add_events.py
