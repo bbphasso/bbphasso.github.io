@@ -4,7 +4,7 @@
 		<title>BBPH Asso</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
 	</head>
 	<body class="is-preload">
 
@@ -22,7 +22,7 @@
                                 </header>
                                 <div class="bureau-grid">
                                         <article class="bureau">
-                                            <img src="images/icones/icon_presidence.jpg" alt="Icône" class="feature-icon"/>
+                                            <img src="/images/icones/icon_presidence.jpg" alt="Icône" class="feature-icon"/>
                                             <div class="content">
                                                 <h3>Présidence</h3>
                                                 <ul id="bureau-presidence">
@@ -32,7 +32,7 @@
                                             </div>
                                         </article>										
                                         <article class="bureau">
-                                            <img src="images/icones/icon_pole_science.png" alt="Icône" class="feature-icon"/>
+                                            <img src="/images/icones/icon_pole_science.png" alt="Icône" class="feature-icon"/>
                                             <div class="content">
                                                 <h3>Pôle scientifique</h3>
                                                 <ul id="bureau-scientifique">
@@ -44,7 +44,7 @@
                                             </div>
                                         </article>
                                         <article class="bureau">
-                                            <img src="images/icones/icon_communication.png" alt="Icône" class="feature-icon"/>
+                                            <img src="/images/icones/icon_communication.png" alt="Icône" class="feature-icon"/>
                                             <div class="content">
                                                 <h3>Pôle communication</h3>
                                                 <ul id="bureau-communication">
@@ -54,7 +54,7 @@
                                             </div>
                                         </article>
                                         <article class="bureau">
-                                            <img src="images/icones/icon_tresorerie.png" alt="Icône" class="feature-icon"/>
+                                            <img src="/images/icones/icon_tresorerie.png" alt="Icône" class="feature-icon"/>
                                             <div class="content">
                                                 <h3>Trésorerie</h3>
                                                 <ul id="bureau-tresorerie">
@@ -64,7 +64,7 @@
                                             </div>
                                         </article>
                                         <article class="single">
-                                            <img src="images/icones/icon_secretariat.png" alt="Icône" class="feature-icon"/>
+                                            <img src="/images/icones/icon_secretariat.png" alt="Icône" class="feature-icon"/>
                                             <div class="content">
                                                 <h3>Secrétariat</h3>
                                                 <ul id="bureau-secretariat">
@@ -99,14 +99,14 @@
 
 		<!-- Scripts -->
 			<!-- Load layout -->
-			<script src="scripts/layout_loader.js"></script>
+			<script src="/scripts/layout_loader.js"></script>
             <script>
                 // Chargement automatique des membres du bureau, photo et liste des evenements
                 document.addEventListener('DOMContentLoaded', function () {
                     var urlParams = new URLSearchParams(window.location.search);
                     var officeId = urlParams.get('id');
                     
-                    fetch('data/bureaux.json')
+                    fetch('/data/bureaux.json')
                         .then(response => response.json())
                         .then(bureaux => {
                             var office = bureaux.find(e => e.id === officeId);
@@ -148,11 +148,11 @@
                 </script>
         
             <!-- Les scripts JS nécessaires à la page -->
-            <script src="assets/js/jquery.min.js"></script>
-            <script src="assets/js/browser.min.js"></script>
-            <script src="assets/js/breakpoints.min.js"></script>
-            <script src="assets/js/util.js"></script>
-            <script src="assets/js/main.js"></script>
+            <script src="/assets/js/jquery.min.js"></script>
+            <script src="/assets/js/browser.min.js"></script>
+            <script src="/assets/js/breakpoints.min.js"></script>
+            <script src="/assets/js/util.js"></script>
+            <script src="/assets/js/main.js"></script>
 
 	</body>
 </html>

@@ -27,7 +27,7 @@
             "Un Séminaire `Et si on travaillait ensemble ?`",
             "20 MJC, 2 soirées, une préparation au concours de l'EDSP2 et entraînements soutenances pour les stagiaires de M2"
             ],
-        "photo": "images/defaut.jpg"
+        "photo": "/images/defaut.jpg"
     },
     {
         "id": "bureau2",
@@ -57,7 +57,7 @@
             "Séminaire `Société et chercheurs : co-construire la sciende de demaine` avec Cécile Walter et Florence Francis-Oliviero",
             "23 MJC réalisés, 4 auberges espagnoles, 3 soirées, une préparation au concours de l'EDSP2 et entraînements soutenances pour les stagiaires de M2"
             ],
-        "photo": "images/defaut.jpg"
+        "photo": "/images/defaut.jpg"
     },
     {
         "id": "bureau3",
@@ -85,6 +85,6 @@
         "evenements": [
                 "En cours d'organisation"
             ],
-        "photo": "images/Bureaux/Bureau_2025_2026.JPG"
+        "photo": "/images/Bureaux/Bureau_2025_2026.JPG"
       }
   ]

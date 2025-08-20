@@ -4,7 +4,7 @@
 		<title>BBPH Asso</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
 	</head>
 	<body class="is-preload">
 
@@ -38,10 +38,10 @@
 			</div>
 
 		<!-- Scripts -->
-
+		
 		<script>
 			// Charger la sidebar avant de lancer le script principal
-			fetch('sidebar.html')
+			fetch('/html/sidebar.html')
 				.then(response => response.text())
 				.then(html => {
 					// Injecter le contenu de la sidebar
@@ -49,7 +49,7 @@
 
 					// Charger et exécuter main.js après l'injection
 					const script = document.createElement('script');
-					script.src = 'assets/js/main.js';  // Ajoute ton script principal
+					script.src = '/assets/js/main.js';  // Ajoute ton script principal
 					script.defer = true;  // Assure-toi que le script est exécuté après l'injection
 					document.body.appendChild(script);
 				})
@@ -57,14 +57,14 @@
 		</script>
 		<script>
 			// Charger le header avant de lancer le script principal
-			fetch('header.html')
+			fetch('/html/header.html')
 				.then(response => response.text())
 				.then(html => {
 					// Injecter le contenu du header
 					document.getElementById('header-container').innerHTML = html;
 	
 					// Charger la sidebar
-					return fetch('sidebar.html');
+					return fetch('/html/sidebar.html');
 				})
 				.then(response => response.text())
 				.then(html => {
@@ -73,7 +73,7 @@
 	
 					// Charger et exécuter main.js après l'injection
 					const script = document.createElement('script');
-					script.src = 'assets/js/main.js';  // Ajoute ton script principal
+					script.src = '/assets/js/main.js';  // Ajoute ton script principal
 					script.defer = true;  // Assure-toi que le script est exécuté après l'injection
 					document.body.appendChild(script);
 				})
@@ -84,7 +84,7 @@
                 var urlParams = new URLSearchParams(window.location.search);
                 var eventId = urlParams.get('id');
                 
-                fetch('data/events.json')
+                fetch('/data/events.json')
                     .then(response => response.json())
                     .then(events => {
                         var event = events.find(e => e.id === eventId);
@@ -121,10 +121,12 @@
             });
         </script>
 		<!-- Les scripts JS nécessaires à la page -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-        <script src="assets/js/main.js"></script>
+		 
+		<script src="/assets/js/jquery.min.js"></script>
+		<script src="/assets/js/browser.min.js"></script>
+		<script src="/assets/js/breakpoints.min.js"></script>
+		<script src="/assets/js/util.js"></script>
+        <script src="/assets/js/main.js"></script>
+		
 	</body>
 </html>

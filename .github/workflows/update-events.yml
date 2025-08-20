@@ -1,4 +1,4 @@
-name: Update LinkedIn JSON
+name: Update Calendar Events
 
 # Déclenchement automatique tous les jours à 6h UTC, ou à la main
 on:
@@ -21,17 +21,20 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Installer requests
+      - name: Installer dependencies
         run: pip install requests
+        run: pip install re
+        run: pip install Path
+        run: pip install datetime
 
       - name: Exécuter le script Python
-        run: python /scripts/update_LKI_posts.py
+        run: python /scripts/add_events.py
 
       - name: Commit & push si modification
         run: |
           git config --global user.name "quentinlaval"
           git config --global user.email "quentin.laval@u-bordeaux.fr"
-          git add /data/Last_LKIposts.json
-          git commit -m "Mise à jour auto des posts LinkedIn" || echo "Aucun changement"
+          git add /data/events.json
+          git commit -m "Mise à jour auto des événements" || echo "Aucun changement"
           git remote set-url origin "https://x-access-token:${{ secrets.WEB_BBPH }}@github.com/${{ github.repository }}"
           git push origin HEAD:main
