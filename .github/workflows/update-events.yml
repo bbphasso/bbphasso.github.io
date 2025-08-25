@@ -32,7 +32,7 @@ jobs:
         run: |
           git config --global user.name "quentinlaval"
           git config --global user.email "quentin.laval@u-bordeaux.fr"
-          git add /data/events.json
+          git add data/events.json
           git commit -m "Mise à jour auto des événements" || echo "Aucun changement"
           git remote set-url origin "https://x-access-token:${{ secrets.WEB_BBPH }}@github.com/${{ github.repository }}"
           git push origin HEAD:main
