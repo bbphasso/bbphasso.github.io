@@ -25,7 +25,7 @@ jobs:
         run: pip install requests
 
       - name: Exécuter le script Python
-        run: python /scripts/update_LKI_posts.py
+        run: python scripts/update_LKI_posts.py
 
       - name: Commit & push si modification
         run: |
