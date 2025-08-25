@@ -36,5 +36,5 @@ top3_rows = sorted_rows[:3]
 top3_columnB = [row[1] for row in top3_rows]
 
 # Save in JSON
-with open("/data/Last_LKIposts.json", "w") as f:
+with open("data/Last_LKIposts.json", "w") as f:
     json.dump(top3_columnB, f)
