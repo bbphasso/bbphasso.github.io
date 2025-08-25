@@ -173,7 +173,7 @@ a {
   color: #f56a6a;
   text-decoration: none; }
   a:hover {
-    border-bottom-color: #f56a6a;
+    border-bottom-color: #ffffff;
     color: #ffffff !important; }
     a:hover strong {
       color: inherit; }
