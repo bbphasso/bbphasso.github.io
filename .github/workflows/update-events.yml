@@ -26,7 +26,7 @@ jobs:
           pip install requests
 
       - name: Exécuter le script Python
-        run: python /scripts/add_events.py
+        run: python scripts/add_events.py
 
       - name: Commit & push si modification
         run: |
