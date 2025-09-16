@@ -64,11 +64,43 @@
     "author": "Romane Le Goff",
     "summary": "Soon available"
   },
-    {
+  {
     "id": "seminaire9",
     "title": "Auberge espagnole",
     "start": "2025-06-18T12:00:00",
     "end": "2025-06-18T13:00:00",
     "summary": "Chacun ramène à manger pour partager un moment convivial en extérieur"
+  },
+  {
+    "id": "seminaire10",
+    "author": "Alice Montoyo (GHIGS)",
+    "start": "2025-09-03T12:00:00",
+    "end": "2025-09-03T12:30:00",
+    "title": "MJC salle Chastang",
+    "summary": "Présentation du projet EBO-PEP (Ebola Post-Exposure Prophylaxis) : Évaluation de l'efficacité d'une stratégie de prophylaxie post-exposition chez les contacts à haut risque de développer une maladie à virus Ebola."
+  },
+  {
+    "id": "seminaire11",
+    "author": "Louise Hardelin et Maeva Andre (1/ M2 PROMS - INTERNE DE SP - 2/ M2 EPI (STAGE))",
+    "start": "2025-09-10T12:00:00",
+    "end": "2025-09-10T12:30:00",
+    "title": "1/ Entrainement M2 (PROMS) - 2/ Entrainement 15 min M2 (EPI) salle Pous",
+    "summary": "1/ Usagers et tabagisme : perceptions et enjeux d’un campus santé sans tabac à l’Université de Bordeaux - 2/ Associations entre les maladies atopiques dans la petite enfance et les troubles émotionnels dans l'enfance au sein de la cohorte EDEN."
+  },
+  {
+    "id": "seminaire12",
+    "author": "Alex Dascenco (AHEAD, INTERNE DE SP)",
+    "start": "2025-09-17T12:00:00",
+    "end": "2025-09-17T12:30:00",
+    "title": "MJC salle Mann",
+    "summary": "-"
+  },
+  {
+    "id": "seminaire13",
+    "author": "Arthur Hughes (SISTM, DOCTORANT)",
+    "start": "2025-09-24T12:00:00",
+    "end": "2025-09-24T12:30:00",
+    "title": "présentation salle Chastang",
+    "summary": "Identification of high-dimensional surrogate markers : methodology and application to vaccination"
   }
 ]
