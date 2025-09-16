@@ -60,8 +60,8 @@ def main():
                     existing_keys.add(event_key(event))  # Add the key to keylist
 
     print(existing_events)
-    # with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-    #     json.dump(existing_events, f, ensure_ascii=False, indent=2)
+    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+        json.dump(existing_events, f, ensure_ascii=False, indent=2)
 
 
 if __name__ == "__main__":
