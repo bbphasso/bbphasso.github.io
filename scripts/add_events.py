@@ -7,7 +7,7 @@ from pathlib import Path
 
 SHEET_ID = "13sQtqiFtBh8ov1xGo13mzOKOg-d-_KXwsQcGAVlmhuE"
 SHEET_GID = "0"  # For first sheet
-OUTPUT_FILE = "/data/events.json"
+OUTPUT_FILE = "data/events.json"
 
 URL = f"https://docs.google.com/spreadsheets/d/{SHEET_ID}/export?format=csv&gid={SHEET_GID}"
 
@@ -59,7 +59,6 @@ def main():
                     existing_events.append(event)
                     existing_keys.add(event_key(event))  # Add the key to keylist
 
-    print(existing_events)
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(existing_events, f, ensure_ascii=False, indent=2)
 
