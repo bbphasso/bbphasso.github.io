@@ -74,7 +74,7 @@ input, select, textarea {
   width: 100%;
 }
 
-@media screen and (min-width: 736px) {
+@media screen and (min-width: 1000px) {
   .bureau-grid {
     grid-template-columns: 1fr 1fr; /* deux colonnes égales */
   }
