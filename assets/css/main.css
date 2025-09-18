@@ -66,18 +66,43 @@ input, select, textarea {
 }
 
 /* Pour les articles */
+/* reset utile */
+*, *::before, *::after { box-sizing: border-box; }
+
+/* Grid par défaut : 2 colonnes */
 .bureau-grid {
   display: grid;
-  grid-template-columns: 1fr; /* par défaut : une seule colonne */
+  grid-template-columns: 1fr 1fr;
   gap: 40px 20px;
   justify-items: center;
   width: 100%;
+  /* pas de max-width ici (ou max-width: none) si tu veux qu'il prenne toute la largeur */
 }
 
-@media screen and (min-width: 1000px) {
+/* 1 colonne sur petits écrans */
+@media screen and (max-width: 768px) {
   .bureau-grid {
-    grid-template-columns: 1fr 1fr; /* deux colonnes égales */
+    grid-template-columns: 1fr;
+    gap: 24px 12px; /* optionnel : réduire l'espace sur mobile */
   }
+}
+
+/* Empêcher les enfants de forcer la largeur */
+.bureau, .bureau .content {
+  width: 100%;
+}
+
+/* Images responsives (très important) */
+.bureau .feature-icon {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Empêcher les mots longs / listes de casser la mise en page */
+.bureau, .bureau .content, .bureau ul {
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .bureau {
