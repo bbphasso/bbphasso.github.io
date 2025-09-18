@@ -41,7 +41,7 @@
 								</section>
 								<hr class="separator">
 							<!-- Section LinkedIn -->
-								<section>
+								<section class="linkedin-embed">
 									<header class="major">
 										<h2>Nos derniers posts LinkedIn</h2>
 									</header>
@@ -244,6 +244,7 @@
                         .catch(error => console.error('Erreur lors de la récupération du bureau:', error));
                 });
                 </script>
+
 			<!-- Script automatique posts LinkedIn -->
 			<script>
 				fetch('/data/Last_LKIposts.json')
@@ -260,12 +261,57 @@
 
 					// Update iframes
 					for (let i = 0; i < iframes.length; i++) {
-						console.log(top3URNs[i])
 						iframes[i].src = `https://www.linkedin.com/embed/feed/update/${top3URNs[i]}?collapsed=1`;
 					}
 				});
 			</script>	
-			
+			<!-- Ajoute une pop-up si on est sur Brave pour les posts linkedin non-affichés -->
+			<script>
+				async function isBraveBrowser() {
+				if (!navigator.brave) return false;
+				try {
+					return await navigator.brave.isBrave();
+				} catch(e) {
+					return false;
+				}
+				}
+
+				isBraveBrowser().then(isBrave => {
+				if (!isBrave) return;
+
+				document.querySelectorAll('.linkedin-posts').forEach(div => {
+					// crée le message
+					const warning = document.createElement('div');
+					warning.className = 'linkedin-warning';
+					warning.innerHTML = `
+					<p>🚫 Brave peut bloquer l'affichage des posts LinkedIn.</p>
+					<p><strong>Autorisez les traqueurs</strong> dans Brave pour voir ce contenu.</p>
+					<div class="btns">
+						<button class="howto-btn" type="button">Comment autoriser ?</button>
+						<button class="close-btn" type="button">Fermer</button>
+					</div>
+					<div class="howto">
+						<p>Pour autoriser : cliquez sur l'icône <strong>lion</strong> (Brave) dans la barre d'adresse puis désactivez les "Shields" pour ce site, ou autorisez les cookies tiers.</p>
+					</div>
+					`;
+
+					// insertion : avant le container des iframes si présent, sinon au début de la section
+					div.appendChild(warning);
+
+					// handlers
+					warning.querySelector('.howto-btn').addEventListener('click', () => {
+					const h = warning.querySelector('.howto');
+					h.style.display = (h.style.display === 'none' || h.style.display === '') ? 'block' : 'none';
+					});
+
+					warning.querySelector('.close-btn').addEventListener('click', () => {
+					// ferme le bloc
+					warning.remove();
+					});
+				});
+				});
+				</script>
+
 			<script src="/assets/js/jquery.min.js"></script>
 			<script src="/assets/js/browser.min.js"></script>
 			<script src="/assets/js/breakpoints.min.js"></script>

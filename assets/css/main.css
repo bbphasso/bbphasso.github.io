@@ -189,6 +189,27 @@ input, select, textarea {
   }
 }
 
+/* Warning si on est sur Brave */
+.linkedin-warning {
+  border: 1px solid #ddd;
+  background: #f8f9fa;
+  padding: 1em;
+  color: #333;
+  font-size: 0.95em;
+  text-align: center;
+  border-radius: 0.5em;
+  position: relative;
+}
+.linkedin-warning p { margin: .25em 0; }
+.linkedin-warning .btns { margin-top: .5em; display:flex; gap:.5em; justify-content:center; flex-wrap:wrap; }
+.linkedin-warning button {
+  padding:.45em .8em;
+  border-radius:.35em;
+  border:1px solid #bbb;
+  background:#fff;
+  cursor:pointer;
+}
+.linkedin-warning .howto { font-size:0.85em; color:#666; margin-top:.5em; display:none; text-align:left; }
 
 
 /* Classe pour souligner */
