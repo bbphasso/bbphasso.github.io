@@ -63,25 +63,50 @@
         "id": "bureau3",
         "title": "Bureau 2025 - 2026",
         "presidence": [
-            "Anne-Andrée Ruiz",
-            "Antonin Colajanni"
-            ],
+            {
+                "name": "Anne-Andrée Ruiz",
+                "linkedin": "https://www.linkedin.com/in/anne-andr%C3%A9e-ruiz-97a2b319b/"
+            },
+            {
+                "name": "Antonin Colajanni",
+                "linkedin": "https://www.linkedin.com/in/antonin-colajanni-580808245/"
+                }
+        ],
         "tresorerie": [
-            "Quentin Laval",
-            "Daniela Gouna"
-            ],
+            {
+                "name": "Quentin Laval",
+                "linkedin": "https://www.linkedin.com/in/quentin-laval-33000bordeaux/"},
+            {
+                "name": "Daniela Gouna",
+                "linkedin": "https://www.linkedin.com/in/ange-marie-daniela-gouna/"}
+        ],
         "secretariat": [
-            "Nicolas Boespflug"
-            ],
+            {
+                "name": "Nicolas Boespflug",
+                "linkedin": "https://www.linkedin.com/in/nicolas-boespflug-0989a2179/"}
+        ],
         "communication": [
-            "Natacha Lebrun",
-            "Antonin Colajanni"
+            {
+                "name": "Natacha Lebrun",
+                "linkedin": "https://www.linkedin.com/in/natacha-lebrun-a230901b8/"},
+            {
+                "name": "Antonin Colajanni",
+                "linkedin": "https://www.linkedin.com/in/antonin-colajanni-580808245/"}
             ],
         "scientifique": [
-            "Virginie Faidherbe",
-            "Tom Fischer",
-            "Raphaël Garcia"
-            ],
+            {
+                "name": "Virginie Faidherbe",
+                "linkedin": "https://www.linkedin.com/in/virginie-faidherbe-11b602343/"
+            },
+            {
+                "name": "Tom Fischer",
+                "linkedin": "https://www.linkedin.com/in/tom-fischer-975b461a2/"
+            },
+            {
+                "name": "Raphaël Garcia",
+                "linkedin": "https://www.linkedin.com/in/raphaelgarcia33/"
+            }    
+        ],
         "evenements": [
                 "En cours d'organisation"
             ],

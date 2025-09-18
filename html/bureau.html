@@ -133,7 +133,15 @@
                                         element.innerHTML = '';
                                         data.forEach(item => {
                                             const li = document.createElement('li');
-                                            li.textContent = item;
+                                                if (typeof item === 'object' && item.name && item.linkedin) {
+                                                    const a = document.createElement('a');
+                                                    a.href = item.linkedin;
+                                                    a.target = "_blank";
+                                                    a.textContent = item.name;
+                                                    li.appendChild(a);
+                                                } else {
+                                                    li.textContent = item;
+                                                }
                                             element.appendChild(li);
                                         });
                                     } else {
