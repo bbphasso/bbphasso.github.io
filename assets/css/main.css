@@ -68,16 +68,15 @@ input, select, textarea {
 /* Pour les articles */
 .bureau-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 colonnes de largeur égale */
-  gap: 40px 20px; /* 40px entre lignes, 20px entre colonnes */
-  justify-items: center; /* centre les articles dans leur colonne */
-  max-width: 100%;
+  grid-template-columns: 1fr; /* par défaut : une seule colonne */
+  gap: 40px 20px;
+  justify-items: center;
+  width: 100%;
 }
 
-@media screen and (max-width: 736px) {
+@media screen and (min-width: 301px) {
   .bureau-grid {
-    grid-template-columns: 1fr; /* 1 colonne sur mobile */
-    max-width: 100%;
+    grid-template-columns: 1fr 1fr; /* deux colonnes égales */
   }
 }
 
