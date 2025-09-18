@@ -101,15 +101,6 @@ input, select, textarea {
   min-width: 0 !important;
 }
 
-/* responsive : 1 colonne sur mobile */
-@media screen and (max-width: 600px) {
-  .bureau-grid {
-    grid-template-columns: 1fr !important;  /* 1 colonne */
-    gap: 24px 12px;
-  }
-}
-
-
 .bureau {
   display: flex; /* Flex horizontal */
   align-items: flex-start; /* Aligne image et texte au centre verticalement */
@@ -126,6 +117,7 @@ input, select, textarea {
     align-items: flex-start;
     grid-column: 1 / 3; /* L'article occupe les deux colonnes */
     justify-self: center; /* Et il est centré sur toute la largeur */
+    gap: 20px;
   }
 
   /* Barre horizontale servant de séparation dans bureau.html */
@@ -138,7 +130,7 @@ input, select, textarea {
     margin-left: auto;        /* Centre la barre */
     margin-right: auto;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .bureau-grid {
     grid-template-columns: 1fr !important;  /* 1 colonne */
     gap: 24px 12px;
@@ -154,7 +146,49 @@ input, select, textarea {
   .bureau .feature-icon {
     margin: 0 0 15px 0 !important;          /* icône centrée au-dessus du texte */
   }
+
+  .single {
+    flex-direction: column !important;    /* vertical */
+    align-items: center !important;       /* centre icône et texte */
+    text-align: center !important;
+    max-width: 100% !important;
+  }
 }
+
+
+/* Conteneur des iframes */
+.linkedin-posts {
+  display: flex;
+  flex-wrap: wrap;          /* permet de passer à la ligne sur mobile */
+  justify-content: center;  /* centre les iframes horizontalement */
+  gap: 20px;                /* espace entre les iframes */
+}
+
+/* Iframes */
+.linkedin-posts iframe {
+  width: 100%;             /* prend tout l’espace disponible */
+  max-width: 504px;        /* taille fixe sur desktop */
+  aspect-ratio: 504 / 550; /* hauteur automatique */
+  border: none;
+  display: block;
+}
+
+/* Sur desktop (>600px) : force 3 iframes en ligne */
+@media screen and (min-width: 601px) {
+  .linkedin-posts iframe {
+    flex: 0 0 auto;        /* largeur fixe, ne se réduit pas */
+  }
+}
+
+
+/* Optionnel : ajustement pour mobile si tu veux plus de marge */
+@media screen and (max-width: 600px) {
+  .linkedin-posts iframe {
+    margin-bottom: 15px;
+  }
+}
+
+
 
 /* Classe pour souligner */
 .underline {
