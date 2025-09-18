@@ -66,44 +66,35 @@ input, select, textarea {
 }
 
 /* Pour les articles */
-/* reset utile */
-*, *::before, *::after { box-sizing: border-box; }
-
-/* Grid par défaut : 2 colonnes */
 .bureau-grid {
-  display: grid;
+  display: grid !important;          /* override bootstrap flex */
   grid-template-columns: 1fr 1fr;
   gap: 40px 20px;
   justify-items: center;
   width: 100%;
-  /* pas de max-width ici (ou max-width: none) si tu veux qu'il prenne toute la largeur */
 }
 
-/* 1 colonne sur petits écrans */
-@media screen and (max-width: 768px) {
-  .bureau-grid {
-    grid-template-columns: 1fr;
-    gap: 24px 12px; /* optionnel : réduire l'espace sur mobile */
-  }
+.bureau-grid > * {
+  min-width: 0 !important;          /* crucial si bootstrap a min-width auto */
 }
 
-/* Empêcher les enfants de forcer la largeur */
-.bureau, .bureau .content {
-  width: 100%;
+.bureau, .bureau .content, .bureau ul {
+  width: 100% !important;
+  min-width: 0 !important;
 }
 
-/* Images responsives (très important) */
-.bureau .feature-icon {
-  max-width: 100%;
+.bureau img, .feature-icon {
+  max-width: 100% !important;
   height: auto;
   display: block;
 }
 
-/* Empêcher les mots longs / listes de casser la mise en page */
-.bureau, .bureau .content, .bureau ul {
-  overflow-wrap: break-word;
-  word-break: break-word;
+@media screen and (max-width: 600px) {
+  .bureau-grid {
+    grid-template-columns: 1fr !important;  /* 1 colonne sur mobile */
+  }
 }
+
 
 .bureau {
   display: flex; /* Flex horizontal */
