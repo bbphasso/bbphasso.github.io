@@ -60,10 +60,10 @@ input, select, textarea {
 .feature-icon {
     width: 90px;
     height: 90px;
-    margin-bottom: 15px; /* pour l'espacement sous l'icône */
-    margin-right: 15px;
-    margin-left: 30px;
+    margin: 0 auto 15px auto; /* top 0, centré horizontalement, bottom 15px */
+    display: block;           /* obligatoire pour que margin:auto fonctionne */
 }
+
 
 /* Pour les articles */
 .bureau-grid {
@@ -83,13 +83,16 @@ input, select, textarea {
   min-width: 0 !important;
 }
 
-.bureau img, .feature-icon {
-  max-width: 100% !important;
-  height: auto;
-  display: block;
+.bureau .feature-icon {
+    display: block;       /* pour que l'image prenne sa ligne si besoin */
+    max-width: 100%;      /* responsive */
+    height: auto;
+    margin: 0 auto 10px;  /* centre et espace en bas du texte */
+    position: static;     /* s'assure qu'aucun positionnement absolu ne reste */
 }
 
-@media screen and (max-width: 600px) {
+
+@media screen and (max-width: 768px) {
   .bureau-grid {
     grid-template-columns: 1fr !important;  /* 1 colonne sur mobile */
   }
