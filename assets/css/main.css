@@ -66,35 +66,46 @@ input, select, textarea {
 
 
 /* Pour les articles */
+/* Grid parent */
 .bureau-grid {
-  display: grid !important;          /* override bootstrap flex */
-  grid-template-columns: 1fr 1fr;
+  display: grid !important;           /* override Bootstrap */
+  grid-template-columns: 1fr 1fr;     /* 2 colonnes par défaut */
   gap: 40px 20px;
   justify-items: center;
   width: 100%;
 }
 
+/* enfants du grid */
 .bureau-grid > * {
-  min-width: 0 !important;          /* crucial si bootstrap a min-width auto */
+  min-width: 0 !important;            /* permet aux enfants de rétrécir */
 }
 
-.bureau, .bureau .content, .bureau ul {
+/* articles */
+.bureau {
+  width: 100% !important;
+  min-width: 0 !important;
+  text-align: center;                 /* centre texte et icône */
+}
+
+/* icônes */
+.bureau .feature-icon {
+  width: 90px;
+  height: 90px;
+  display: block;                     /* obligatoire pour centrer */
+  margin: 0 auto 15px auto;           /* centré horizontalement, espace sous icône */
+}
+
+/* contenu texte */
+.bureau .content {
   width: 100% !important;
   min-width: 0 !important;
 }
 
-.bureau .feature-icon {
-    display: block;       /* pour que l'image prenne sa ligne si besoin */
-    max-width: 100%;      /* responsive */
-    height: auto;
-    margin: 0 auto 10px;  /* centre et espace en bas du texte */
-    position: static;     /* s'assure qu'aucun positionnement absolu ne reste */
-}
-
-
-@media screen and (max-width: 768px) {
+/* responsive : 1 colonne sur mobile */
+@media screen and (max-width: 600px) {
   .bureau-grid {
-    grid-template-columns: 1fr !important;  /* 1 colonne sur mobile */
+    grid-template-columns: 1fr !important;  /* 1 colonne */
+    gap: 24px 12px;
   }
 }
 
@@ -126,6 +137,23 @@ input, select, textarea {
     width: 100%;               /* Largeur de la barre (facultatif) */
     margin-left: auto;        /* Centre la barre */
     margin-right: auto;
+}
+@media screen and (max-width: 600px) {
+  .bureau-grid {
+    grid-template-columns: 1fr !important;  /* 1 colonne */
+    gap: 24px 12px;
+  }
+
+  .bureau {
+    flex-direction: column !important;      /* Flex vertical */
+    align-items: center !important;         /* Centre l'icône et le texte */
+    text-align: center !important;
+    max-width: 100% !important;             /* prend toute la largeur */
+  }
+
+  .bureau .feature-icon {
+    margin: 0 0 15px 0 !important;          /* icône centrée au-dessus du texte */
+  }
 }
 
 /* Classe pour souligner */
