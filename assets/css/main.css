@@ -73,6 +73,7 @@ input, select, textarea {
   gap: 40px 20px;
   justify-items: center;
   width: 100%;
+  max-width: 100%;
 }
 
 /* enfants du grid */
