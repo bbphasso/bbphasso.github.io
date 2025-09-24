@@ -126,7 +126,7 @@ input, select, textarea {
     border: none;            /* Supprime la bordure par défaut */
     height: 4px;              /* Épaisseur de la barre */
     background-color: #f56a6a; /* Couleur de la barre */
-    margin: 60px 0;           /* Espace au-dessus et en-dessous */
+    margin: 30px 0;           /* Espace au-dessus et en-dessous */
     width: 100%;               /* Largeur de la barre (facultatif) */
     margin-left: auto;        /* Centre la barre */
     margin-right: auto;
@@ -278,7 +278,7 @@ a {
   text-decoration: none; }
   a:hover {
     border-bottom-color: #ffffff;
-    color: #ffffff !important; }
+    color: #000000 !important; }
     a:hover strong {
       color: inherit; }
 
@@ -2010,24 +2010,36 @@ button,
     margin: 0 auto;
     max-width: 110em; }
     #main > .inner > section {
-      padding: 6em 0 4em 0 ;}
+      padding: 3em 0 4em 0 ;}
       #main > .inner > section:first-of-type {
         border-top: 0 !important; }
   @media screen and (max-width: 1680px) {
     #main > .inner {
       padding: 0 5em 0.1em 5em ; }
       #main > .inner > section {
-        padding: 5em 0 3em 0 ; } }
+        padding: 2em 0 3em 0 ; } }
   @media screen and (max-width: 1280px) {
     #main > .inner {
       padding: 0 4em 0.1em 4em ; }
       #main > .inner > section {
-        padding: 4em 0 2em 0 ; } }
+        padding: 2em 0 2em 0 ; } }
   @media screen and (max-width: 736px) {
     #main > .inner {
       padding: 0 2em 0.1em 2em ; }
       #main > .inner > section {
-        padding: 3em 0 1em 0 ; } }
+        padding: 2em 0 1em 0 ; } }
+
+
+/* Images partenaires */
+.img_part {
+  width: 80%;
+}
+
+@media screen and (max-width: 550px) {
+  .img_part {
+    width: 100% !important;
+  }
+}
 
 /* Sidebar */
 
@@ -2335,7 +2347,7 @@ button,
     font-size: 0.9em;
     padding: 0.625em 0; }
     #menu ul a:hover, #menu ul span:hover {
-      color: #f56a6a; }
+      color: #000000; }
     #menu ul a.opener, #menu ul span.opener {
       -moz-transition: color 0.2s ease-in-out;
       -webkit-transition: color 0.2s ease-in-out;

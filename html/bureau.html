@@ -99,6 +99,7 @@
 
 		<!-- Scripts -->
 			<!-- Load layout -->
+            <script src="/scripts/Block_currentpage.js"></script>
 			<script src="/scripts/layout_loader.js"></script>
             <script>
                 // Chargement automatique des membres du bureau, photo et liste des evenements
@@ -153,7 +154,8 @@
                         })
                         .catch(error => console.error('Erreur lors de la récupération du bureau:', error));
                 });
-                </script>
+                Block_currentpage();
+            </script>
         
             <!-- Les scripts JS nécessaires à la page -->
             <script src="/assets/js/jquery.min.js"></script>

@@ -13,6 +13,11 @@ function loadLayout() {
       .then(html => {
         // Injecter le contenu de la sidebar
         document.getElementById('sidebar-container').innerHTML = html;
+
+        // Appeler Block_currentpage juste après l'injection
+        if (typeof Block_currentpage === "function") {
+          Block_currentpage();
+        }
         // Charger le footer
         return fetch('/html/footer.html');
       })
@@ -34,4 +39,3 @@ function loadLayout() {
   
   // Appelle automatiquement la fonction au chargement de la page
   document.addEventListener("DOMContentLoaded", loadLayout);
-  
