@@ -110,5 +110,13 @@
     "end": "2025-10-02T12:30:00",
     "title": "Auberge espagnole salle Hamilton",
     "summary": "Ramenez vôtre nourriture pour partager ce bon repas tous ensemble"
+  },
+  {
+    "id": "seminaire15",
+    "author": "Anne-Andrée Ruiz et Natacha Lebrun (SISTM - GHIGS)",
+    "start": "2025-10-08T12:00:00",
+    "end": "2025-10-08T12:30:00",
+    "title": "Présentations travaux salle Chastang",
+    "summary": "Mechanistic modeling of the humoral response against SARS-CoV-2 : application on pre-clinical trials with mice - Feasibility of implementing Treatment Decision Algorithms to improve childhood TB diagnosis at low levels of health care in Southern Africa. Multidisciplinary evaluation"
   }
 ]
