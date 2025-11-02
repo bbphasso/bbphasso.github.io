@@ -42,11 +42,18 @@ def main():
 
     for row in rows:
         if row.get("Valide", "").strip().lower() in ["true", "oui", "x", "1"]:
+            if datetime.strptime(row.get("Dates", "").strip(), "%d/%m/%Y") > datetime(2025, 11, 1): # If after 01-11-25 change MJC datetime to 13h
+                hour_start = "13:00:00"
+                hour_stop = "13:30:30"
+            else:
+                hour_start = "12:00:00"
+                hour_stop = "12:30:00"
+
             event = {
                 "id": get_next_id(existing_events),
                 "author": f"{row.get('Nom presentateur', '').strip()} ({row.get('Equipe', '').strip().upper()})",
-                "start": datetime.strptime(row.get("Dates", "").strip(), "%d/%m/%Y").strftime("%Y-%m-%dT12:00:00"),
-                "end": datetime.strptime(row.get("Dates", "").strip(), "%d/%m/%Y").strftime("%Y-%m-%dT12:30:00"),
+                "start": datetime.strptime(row.get("Dates", "").strip(), "%d/%m/%Y").strftime(f"%Y-%m-%dT{hour_start}"),
+                "end": datetime.strptime(row.get("Dates", "").strip(), "%d/%m/%Y").strftime(f"%Y-%m-%dT{hour_stop}"),
                 "title": (
                     f"{row.get('Statut presentation', '').strip()} salle {row.get('Salles', '').strip()}"
                     if row.get("Statut presentation", "").strip() != '-'
