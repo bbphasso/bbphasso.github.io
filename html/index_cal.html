@@ -34,14 +34,13 @@
 						<div class="inner">
 
 							<!-- Header -->
-								<div id="header-container"></div>
+							<div id="header-container"></div>
 
-							<!-- Banner -->
-								<section id="banner">
-									<div id='calendar-container'>
-										<div id='calendar'></div>
-									</div>
-								</section>
+							<!-- Calendar -->
+							<div id='calendar-container'>
+								<div id='calendar'></div>
+							</div>
+
 						</div>
 					</div>
 
@@ -85,9 +84,19 @@
 						center: 'title',
 						right: 'dayGridMonth,listYear'
 						},
-						defaultView: 'dayGridMonth',
+						firstDay: 1, // 1 = Monday
+						initialView: 'dayGridMonth',
 						navLinks: true,
+						locale: 'fr',
+						buttonText: {
+    						today: 'Aujourd’hui',
+  							prev: '<',
+							next: '>',
+							month: 'Mois',
+							list: 'Liste'},
 						editable: false,
+						showNonCurrentDates: true,
+						fixedWeekCount: false,
 						eventLimit: false,
 						events: events.map(event => {
 						return {
