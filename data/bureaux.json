@@ -3,61 +3,119 @@
         "id": "bureau1",
         "title": "Bureau 2023 - 2024",
         "presidence": [
-            "Ilana Caro",
-            "Coralie Delgado"
-            ],
+            {
+                "name": "Ilana Caro",
+                "linkedin": "https://www.linkedin.com/in/ilana-caro-ch%C3%A2telier-391aa716b/"
+            },
+            {
+                "name": "Coralie Delgado",
+                "linkedin": "https://www.linkedin.com/in/coralie-delgado-2bb63a180/"
+            }
+        ],
         "tresorerie": [
-            "Manel Rakez",
-            "Blandine Gendre"
-            ],
+            {
+                "name": "Manel Rakez",
+                "linkedin": "https://www.linkedin.com/in/manel-rakez-9201a8a7/"
+            },
+            {
+                "name": "Blandine Gendre",
+                "linkedin": "https://www.linkedin.com/in/blandine-gendre-084595180/"
+            }
+        ],
         "secretariat": [
-            "Constance Bordes"
-            ],
+            {
+                "name": "Constance Bordes",
+                "linkedin": "https://www.linkedin.com/in/constance-bordes-06a266155/"
+            }
+        ],
         "communication": [
-            "Kateline Le Bourdonnec"
-            ],
+            {
+                "name": "Kateline Le Bourdonnec",
+                "linkedin": "https://www.linkedin.com/in/kateline-le-bourdonnec-466482139/"
+            }
+            
+        ],
         "scientifique": [
-            "Jeanne Bardinet",
-            "Morgane Menant",
-            "Jeanne Neuffer"
-            ],
+            {
+                "name": "Jeanne Bardinet",
+                "linkedin": "https://www.linkedin.com/in/jeanne-bardinet-251a00a7/"
+            },
+            {
+                "name": "Morgane Menant",
+                "linkedin": "https://www.linkedin.com/in/morgane-menant-694a1815b/"
+            },
+            {
+                "name": "Jeanne Neuffer",
+                "linkedin": "https://www.linkedin.com/in/jeanne-neuffer-frontout-666b84194/"
+            }
+        ],
         "evenements": [
             "Un Séminaire interdisciplinaire `Elargissons la recherche`",
             "Un Séminaire `Quid du privé ?`",
             "Un Séminaire `Et si on travaillait ensemble ?`",
             "20 MJC, 2 soirées, une préparation au concours de l'EDSP2 et entraînements soutenances pour les stagiaires de M2"
-            ],
-        "photo": "/images/defaut.jpg"
+        ],
+        "photo": "/images/Bureaux/Bureau_2023_2024.jpg"
     },
     {
         "id": "bureau2",
         "title": "Bureau 2024 - 2025",
         "presidence": [
-            "Léa Faure",
-            "Blondy Kayembe Mulumba"
-            ],
+            {
+                "name": "Léa Faure",
+                "linkedin": "https://www.linkedin.com/in/l%C3%A9a-faure-30b942209/"
+            },
+            {
+                "name": "Blondy Kayembe Mulumba",
+                "linkedin": "https://www.linkedin.com/in/blondy-kayembe-3aba37163/"
+            }
+        ],
         "tresorerie": [
-            "Floriane Samaria",
-            "Mélanie Huchon"
-            ],
+            {
+                "name": "Floriane Samaria",
+                "linkedin": "https://www.linkedin.com/in/floriane-samaria/"
+            },
+            {
+                "name": "Mélanie Huchon",
+                "linkedin": "https://www.linkedin.com/in/m%C3%A9lanie-huchon-988466182/"
+            }
+        ],
         "secretariat": [
-            "Ima Bernada"
-            ],
+            {
+                "name": "Ima Bernada",
+                "linkedin": "https://www.linkedin.com/in/ima-bernada/"
+            }
+        ],
         "communication": [
-            "Amélie Bouche",
-            "Auriane Gabaut"
-            ],
+            {
+                "name": "Amélie Bouche",
+                "linkedin": "https://www.linkedin.com/in/am%C3%A9lie-bouche/"
+            },
+            {
+                "name": "Auriane Gabaut",
+                "linkedin": "https://www.linkedin.com/in/auriane-gabaut-074b2b25a/"
+            }
+        ],
         "scientifique": [
-            "Yvanna Simon",
-            "Océane Pic",
-            "Marie-Anne Pietrowski"
-            ],
+            {
+                "name": "Yvanna Simon",
+                "linkedin": "https://www.linkedin.com/in/yvanna-simon/"
+            },
+            {
+                "name": "Océane Pic",
+                "linkedin": "https://www.linkedin.com/in/oceane-pic/"
+            },
+            {
+                "name": "Marie-Anne Pietrowski",
+                "linkedin": "https://www.linkedin.com/in/marie-anne-pietrowski/"
+            }
+        ],
         "evenements": [
             "Séminaire `Bien s'informer en Santé publique` avec Geneviève Chêne et Priscille Rivière",
             "Séminaire `Société et chercheurs : co-construire la sciende de demaine` avec Cécile Walter et Florence Francis-Oliviero",
             "23 MJC réalisés, 4 auberges espagnoles, 3 soirées, une préparation au concours de l'EDSP2 et entraînements soutenances pour les stagiaires de M2"
-            ],
-        "photo": "/images/defaut.jpg"
+        ],
+        "photo": "/images/Bureaux/Bureau_2024_2025.jpg"
     },
     {
         "id": "bureau3",
@@ -109,7 +167,7 @@
         ],
         "evenements": [
                 "En cours d'organisation"
-            ],
+        ],
         "photo": "/images/Bureaux/Bureau_2025_2026.JPG"
       }
   ]
