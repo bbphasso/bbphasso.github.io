@@ -182,5 +182,37 @@
     "end": "2025-12-10T13:30:30",
     "title": " salle Chastang",
     "summary": "Présentation générale de l'analyse de données RNA-seq dans le cadre de l'analyse différentielle et de son application dans la recherche vaccinale"
+  },
+  {
+    "id": "seminaire24",
+    "author": "Ariel Guerra Adames (AHEAD)",
+    "start": "2026-01-14T13:00:00",
+    "end": "2026-01-14T13:30:30",
+    "title": "Travaux de thèse salle Chastang",
+    "summary": "De la détection à la validation : Méthodes d'explicabilité pour la détection assistée par l'IA des biais aux urgences"
+  },
+  {
+    "id": "seminaire25",
+    "author": "Adrien Orué (BIOSTAT)",
+    "start": "2026-01-28T13:00:00",
+    "end": "2026-01-28T13:30:30",
+    "title": "MJC salle Pous",
+    "summary": "VISTA - Dépistage visuel et prédiction intelligente du cancer du sein : tirer parti des atouts des modèles statistiques avancés et des techniques d'apprentissage profond"
+  },
+  {
+    "id": "seminaire26",
+    "author": "Perrine Lunel (SISTM)",
+    "start": "2026-02-11T13:00:00",
+    "end": "2026-02-11T13:30:30",
+    "title": "Sujet de thèse salle Pous",
+    "summary": "Designs adaptatifs de phase I-II pour le développement précoce de vaccins"
+  },
+  {
+    "id": "seminaire27",
+    "author": "MITS Anaël Erhardt & Lisa Le Scouernec ()",
+    "start": "2026-02-25T13:00:00",
+    "end": "2026-02-25T13:30:30",
+    "title": "MJC salle Pous",
+    "summary": ""
   }
 ]
