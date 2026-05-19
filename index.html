@@ -61,8 +61,8 @@
 										<strong>
 											Envie de rejoindre l'aventure ? Pour adhérer à l'association, rien de plus simple : il vous suffit de régler
 											 une cotisation de <span class="underline">5 €</span> auprès de <a href="mailto:quentin.laval@u-bordeaux.fr">Quentin</a>
-											 ou de <a href="mailto:ange-marie.gouna@u-bordeaux.fr">Daniela</a>, membres du pôle trésorerie à 
-											 contacter directement aux bureaux N311 et N313 ou en scannant le QRcode ci-dessous. L'adhésion est bien plus qu'un soutien financier, elle nous permet d'organiser 
+											 ou de <a href="mailto:matteo.gilone@u-bordeaux.fr">Mattéo</a>, membres du pôle trésorerie à 
+											 contacter directement aux bureaux N311 et N315 ou en scannant le QRcode ci-dessous. L'adhésion est bien plus qu'un soutien financier, elle nous permet d'organiser 
 											 encore plus de séminaires, de soirées et d'événements conviviaux tout au long de l'année ! En devenant membre, vous recevrez votre carte d'adhérent,
 											 qui vous donnera des avantages grâce à nos partenariats. N'attendez plus pour faire partie de la communauté !
 										</strong>
@@ -123,7 +123,17 @@
 													</ul>
 												</div>
 											</article>
-											<article class="single">
+											<article class="bureau" id="article-evenementiel" style="display:none;">
+												<img src="/images/icones/icon_evenementiel.png" alt="Icône" class="feature-icon"/>
+												<div class="content">
+													<h3>Pôle évènementiel</h3>
+													<ul id="bureau-evenementiel">
+														<li></li>
+														<li></li>
+													</ul>
+												</div>
+											</article>
+											<article class="single" id="article-secretariat">
 												<img src="/images/icones/icon_secretariat.png" alt="Icône" class="feature-icon"/>
 												<div class="content">
 													<h3>Secrétariat</h3>
@@ -202,7 +212,7 @@
                 // Chargement automatique des membres du bureau, photo et liste des evenements
                 document.addEventListener('DOMContentLoaded', function () {
                     var urlParams = new URLSearchParams(window.location.search);
-                    var officeId = "bureau3";
+                    var officeId = "bureau4";
                     
                     fetch('/data/bureaux.json')
                         .then(response => response.json())
@@ -217,14 +227,18 @@
                                     'tresorerie', 
                                     'secretariat', 
                                     'communication', 
-                                    'scientifique', 
+                                    'scientifique',
+									'evenementiel', 
                                     'evenements'
                                 ];
                                 
                                 sections.forEach(section => {
                                     const element = document.getElementById(`bureau-${section}`);
                                     const data = office[section];
-                                    
+									
+                                    // Protection plante boucle si evenement absent
+									if (!element || data === undefined) return;
+
                                     if (Array.isArray(data)) {
                                         // Si c'est un array, construire une liste de <li>
                                         element.innerHTML = '';
@@ -246,6 +260,13 @@
                                         element.innerText = data;
                                     }
                                 });
+								// Gestion dynamique de l'article "evenementiel"
+								if (office.evenementiel && office.evenementiel.length > 0) {
+									// Afficher l'article evenementiel
+									document.getElementById('article-evenementiel').style.display = '';
+									// Passer secrétariat de "single" à "bureau"
+									document.getElementById('article-secretariat').className = 'bureau';
+								}
                             }
                         })
                         .catch(error => console.error('Erreur lors de la récupération du bureau:', error));

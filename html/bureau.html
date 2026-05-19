@@ -63,7 +63,17 @@
                                                 </ul>
                                             </div>
                                         </article>
-                                        <article class="single">
+                                        <article class="bureau" id="article-evenementiel" style="display:none;">
+											<img src="/images/icones/icon_evenementiel.png" alt="Icône" class="feature-icon"/>
+                                            <div class="content">
+                                                <h3>Pôle évènementiel</h3>
+                                                <ul id="bureau-evenementiel">
+                                                    <li></li>
+                                                    <li></li>
+                                                </ul>
+                                            </div>
+										</article>
+                                        <article class="single" id="article-secretariat">
                                             <img src="/images/icones/icon_secretariat.png" alt="Icône" class="feature-icon"/>
                                             <div class="content">
                                                 <h3>Secrétariat</h3>
@@ -121,7 +131,8 @@
                                     'tresorerie', 
                                     'secretariat', 
                                     'communication', 
-                                    'scientifique', 
+                                    'scientifique',
+									'evenementiel', 
                                     'evenements'
                                 ];
                                 
@@ -129,6 +140,9 @@
                                     const element = document.getElementById(`bureau-${section}`);
                                     const data = office[section];
                                     
+                                    // Protection plante boucle si evenement absent
+                                    if (!element || data === undefined) return;
+
                                     if (Array.isArray(data)) {
                                         // Si c'est un array, construire une liste de <li>
                                         element.innerHTML = '';
@@ -150,6 +164,13 @@
                                         element.innerText = data;
                                     }
                                 });
+                                // Gestion dynamique de l'article "evenementiel"
+								if (office.evenementiel && office.evenementiel.length > 0) {
+									// Afficher l'article evenementiel
+									document.getElementById('article-evenementiel').style.display = '';
+									// Passer secrétariat de "single" à "bureau"
+									document.getElementById('article-secretariat').className = 'bureau';
+								}
                             }
                         })
                         .catch(error => console.error('Erreur lors de la récupération du bureau:', error));

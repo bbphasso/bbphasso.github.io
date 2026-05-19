@@ -169,5 +169,70 @@
                 "En cours d'organisation"
         ],
         "photo": "/images/Bureaux/Bureau_2025_2026.JPG"
+      },
+    {
+        "id": "bureau4",
+        "title": "Bureau 2026 - 2027",
+        "presidence": [
+            {
+                "name": "Perrine Lunel",
+                "linkedin": "https://www.linkedin.com/in/perrine-lunel-8b4470299/"
+            },
+            {
+                "name": "Mattéo Gilone",
+                "linkedin": "https://www.linkedin.com/in/matteo-gilone-55155525b/"
+                }
+        ],
+        "tresorerie": [
+            {
+                "name": "Quentin Laval",
+                "linkedin": "https://www.linkedin.com/in/quentin-laval-33000bordeaux/"
+            },
+            {
+                "name": "Mattéo Gilone",
+                "linkedin": "https://www.linkedin.com/in/matteo-gilone-55155525b/"
+            }
+        ],
+        "secretariat": [
+            {
+                "name": "Cécile Bourgeois",
+                "linkedin": "https://www.linkedin.com/in/c%C3%A9cile-bourgeois/"}
+        ],
+        "communication": [
+            {
+                "name": "Céline Hosteins",
+                "linkedin": "https://www.linkedin.com/in/celinehosteins333/"},
+            {
+                "name": "Marie Sendra",
+                "linkedin": "https://www.linkedin.com/in/marie-sendra-3bb3861b8/"}
+            ],
+        "scientifique": [
+            {
+                "name": "Clémence Anoumba Ndiaye",
+                "linkedin": "https://www.linkedin.com/in/cl%C3%A9mence-s-chlo%C3%A9-anoumba-ndiaye/"
+            },
+            {
+                "name": "Ariel Guerra-Adames",
+                "linkedin": "https://www.linkedin.com/in/arieloguerra/"
+            },
+            {
+                "name": "Zhe (Aurore) Li",
+                "linkedin": "https://www.linkedin.com/in/zhe-li-828a2539a/"
+            }    
+        ],
+        "evenementiel": [
+            {
+                "name": "Maoulida Mondoha",
+                "linkedin": "https://www.linkedin.com/in/mondoha/"
+            },
+            {
+                "name": "Antoine Ayonou",
+                "linkedin": "https://www.linkedin.com/in/antoine-ayonou-360741197/"
+            }
+        ],
+        "evenements": [
+                "En cours d'organisation"
+        ],
+        "photo": "/images/Bureaux/Bureau_2026_2027.JPG"
       }
   ]
