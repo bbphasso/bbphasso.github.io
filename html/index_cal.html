@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="/assets/css/style.css">
 	<link rel="stylesheet" href="/assets/css/main.css">
 	
+    <link rel="icon" type="image/png" href="/images/BBPH.png">
     <title>BBPH Asso</title>
 
   </head>
@@ -36,11 +37,19 @@
 							<!-- Header -->
 							<div id="header-container"></div>
 
-							<!-- Calendar -->
-							<div id='calendar-container'>
+							<!-- Own Calendar -->
+							<!-- <div id='calendar-container'>
 								<div id='calendar'></div>
-							</div>
-
+							</div> -->
+							<!-- Google Calendar -->
+							<div>
+								<iframe
+									src="https://calendar.google.com/calendar/embed?src=VOTRE_ID_CALENDRIER&ctz=Europe%2FParis"
+									style="border:0"
+									width="800"
+									height="600">
+								</iframe>
+							</div>					
 						</div>
 					</div>
 
@@ -62,7 +71,7 @@
 			<script src="/assets/js/main.js"></script>
 			<script src="/js/popper.min.js"></script>
 			<script src="/js/bootstrap.min.js"></script>
-
+<!-- 
 			<script src='/fullcalendar/packages/core/main.js'></script>
 			<script src='/fullcalendar/packages/interaction/main.js'></script>
 			<script src='/fullcalendar/packages/daygrid/main.js'></script>
@@ -116,9 +125,8 @@
 					.catch(error => console.error("Erreur lors du chargement des événements :", error));
 				});
 				</script>
-		
-		
-				</script>
+			
+			</script> -->
 		
 			<script src="/js/main.js"></script>
 	</body>
