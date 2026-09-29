@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>BBPH Asso - Boîte à idées</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+        <link rel="icon" type="image/png" href="/images/BBPH.png">
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<!-- Header dynamically loaded-->
+								<div id="header-container"></div>
+
+							<!-- Boîte à idées -->
+                            <section>
+                                <header class="major">
+                                    <h2>Boîte à idées</h2>
+                                    <p>Une idée d'événement, de sortie, de partenariat ou d'amélioration ? Partage-la avec le bureau !</p>
+                                </header>
+
+                                <form id="idee-form">
+                                    <div class="fields">
+                                        <div class="field">
+                                            <label for="idee-texte">Ton idée</label>
+                                            <textarea id="idee-texte" name="idee-texte" rows="8" placeholder="Décris ton idée ici..." required></textarea>
+                                        </div>
+                                    </div>
+                                    <ul class="actions">
+                                        <li><input type="submit" value="Envoyer" class="primary" /></li>
+                                    </ul>
+                                </form>
+                            </section>
+
+						</div>
+					</div>
+				<!-- Sidebar -->
+				<div id="sidebar-container"></div>
+			</div>
+
+			<!-- Footnote -->
+			<div id="footer-container"></div>
+
+		<!-- Scripts -->
+			<script src="/scripts/Block_currentpage.js"></script>
+			<script src="/scripts/layout_loader.js"></script>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    var form = document.getElementById('idee-form');
+                    form.addEventListener('submit', function (e) {
+                        e.preventDefault();
+
+                        var texte = document.getElementById('idee-texte').value.trim();
+                        if (!texte) return;
+
+                        var destinataire = 'bbphasso@gmail.com';
+                        var sujet = encodeURIComponent('Nouvelle idée - Boîte à idées BBPH');
+                        var corps = encodeURIComponent(texte);
+
+                        window.location.href = 'mailto:' + destinataire + '?subject=' + sujet + '&body=' + corps;
+                    });
+
+                    Block_currentpage();
+                });
+            </script>
+
+            <!-- Les scripts JS nécessaires à la page -->
+            <script src="/assets/js/jquery.min.js"></script>
+            <script src="/assets/js/browser.min.js"></script>
+            <script src="/assets/js/breakpoints.min.js"></script>
+            <script src="/assets/js/util.js"></script>
+            <script src="/assets/js/main.js"></script>
+
+	</body>
+</html>

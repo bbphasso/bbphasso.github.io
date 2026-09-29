@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>BBPH Asso - Boîte à idées</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+        <link rel="icon" type="image/png" href="/images/BBPH.png">
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<!-- Header dynamically loaded-->
+								<div id="header-container"></div>
+
+							<!-- FAQ -->
+                            <section>
+                                <details class="faq-item">
+                                    <summary class="faq-question">Comment devenir membre de l'association ?</summary>
+                                    <div class="faq-reponse">
+                                        <p>Il te suffit de remplir le formulaire d'adhésion disponible <a href="/index.html#adhesion">ici</a> et de régler la cotisation annuelle. Tu recevras ensuite un mail de confirmation.</p>
+                                    </div>
+                                </details>
+                            </section>
+
+						</div>
+					</div>
+				<!-- Sidebar -->
+				<div id="sidebar-container"></div>
+			</div>
+
+			<!-- Footnote -->
+			<div id="footer-container"></div>
+
+		<!-- Scripts -->
+			<script src="/scripts/Block_currentpage.js"></script>
+			<script src="/scripts/layout_loader.js"></script>
+
+            <!-- Les scripts JS nécessaires à la page -->
+            <script src="/assets/js/jquery.min.js"></script>
+            <script src="/assets/js/browser.min.js"></script>
+            <script src="/assets/js/breakpoints.min.js"></script>
+            <script src="/assets/js/util.js"></script>
+            <script src="/assets/js/main.js"></script>
+        
+        
+    <style>
+        .faq-item {
+            border-bottom: 1px solid rgba(128,128,128,.25);
+            padding: 16px 0;
+        }
+
+        .faq-question {
+            cursor: pointer;
+            font-weight: 600;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::-webkit-details-marker { display: none; } /* cache la flèche par défaut */
+
+        .faq-question::after {
+            content: "+";
+            font-size: 1.3em;
+            transition: transform .2s ease;
+        }
+
+        .faq-item[open] .faq-question::after {
+            content: "−";
+        }
+
+        .faq-reponse {
+            padding-top: 10px;
+            color: #555;
+        }
+    </style>
+    </body>
+</html>

@@ -1,0 +1,272 @@
+/* ============================================================
+   carrousel.css — Composant carrousel autonome
+   Usage : inclure dans toute page qui utilise carrousel.js
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap');
+
+/* ---------- Variables ---------- */
+:root {
+  --c-bg:          #0d0d0d;
+  --c-surface:     #161616;
+  --c-border:      #2a2a2a;
+  --c-accent:      #e8d5b0;
+  --c-accent-dim:  #8a7d63;
+  --c-text:        #f0ece4;
+  --c-muted:       #5a5650;
+  --c-thumb-hover: #2e2e2e;
+
+  --c-radius:      4px;
+  --c-gap:         12px;
+  --c-strip-h:     88px;
+  --c-dot-size:    6px;
+  --c-btn-size:    40px;
+  --c-transition:  0.42s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ---------- Wrapper racine ---------- */
+.carrousel-wrapper {
+  position: relative;
+  width: 100%;
+  font-family: 'DM Mono', 'Courier New', monospace;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--c-radius);
+  overflow: hidden;
+  user-select: none;
+  overscroll-behavior-y: none;
+}
+
+/* ---------- Scène principale ---------- */
+.carrousel-stage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: white;
+  border-color: white;
+}
+
+.carrousel-stage img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transform: scale(1);
+  transition:
+    opacity var(--c-transition),
+    transform var(--c-transition);
+  pointer-events: none;
+}
+
+.carrousel-stage img.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Direction de la transition */
+.carrousel-stage img.slide-in-right  { transform: translateX( 3%) scale(1.02); opacity: 0; }
+.carrousel-stage img.slide-in-left   { transform: translateX(-3%) scale(1.02); opacity: 0; }
+
+/* ---------- Caption (optionnel) ---------- */
+/* .carrousel-caption {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 32px 20px 14px;
+  background: linear-gradient(to top, rgba(0,0,0,.72) 0%, transparent 100%);
+  color: var(--c-text);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.3s, transform 0.3s;
+} */
+
+.carrousel-stage:hover .carrousel-caption,
+.carrousel-caption:not(:empty) {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- Boutons précédent / suivant ---------- */
+.carrousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: var(--c-btn-size);
+  height: var(--c-btn-size);
+  background: rgba(13,13,13,.7);
+  border: 1px solid var(--c-border);
+  color: black;
+  border-radius: var(--c-radius);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, border-color 0.2s;
+  backdrop-filter: blur(4px);
+}
+
+.carrousel-btn:hover {
+  background: #96a25e;
+  border-color: var(--c-accent-dim);
+}
+
+.carrousel-btn svg {
+  display: block !important;
+  width: 30px !important;
+  height: 30px !important;
+  stroke: black !important;
+  fill: none !important;
+  stroke-width: 3 !important;
+  overflow: visible !important;
+}
+
+.carrousel-btn polyline {
+  stroke: black !important;
+  fill: none !important;
+  stroke-width: 3;
+}
+
+.carrousel-btn--prev { left:  var(--c-gap); background:#f56a6a; border: none;}
+.carrousel-btn--next { right: var(--c-gap); background:#f56a6a; border: none;}
+
+/* ---------- Compteur ---------- */
+.carrousel-counter {
+  display: none;
+  position: absolute;
+  top: var(--c-gap);
+  right: var(--c-gap);
+  z-index: 10;
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  color: var(--c-accent-dim);
+  background: rgba(13,13,13,.65);
+  padding: 3px 8px;
+  border-radius: 2px;
+  backdrop-filter: blur(4px);
+}
+
+/* ---------- Points de navigation ---------- */
+.carrousel-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 0;
+  background: grey;
+  border-color: grey;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+
+.carrousel-dot {
+  width: var(--c-dot-size);
+  height: var(--c-dot-size);
+  border-radius: 50%;
+  background: var(--c-muted);
+  border: none;
+  cursor: pointer;
+  transition: background 0.25s, transform 0.25s;
+  padding: 0;
+}
+
+.carrousel-dot.is-active {
+  background: #96a25e;
+}
+
+/* ---------- Bande de miniatures ---------- */
+.carrousel-strip {
+  display: flex;
+  gap: 6px;
+  padding: 8px;
+  height: calc(var(--c-strip-h) + 16px);
+  overflow-x: auto;
+  overflow-y: hidden;
+  background: white;
+  border-top: 1px solid grey;
+  scrollbar-width: thin;
+  scrollbar-color: var(--c-border) transparent;
+  overscroll-behavior-y: none;
+}
+
+.carrousel-strip::-webkit-scrollbar { height: 4px; }
+.carrousel-strip::-webkit-scrollbar-thumb { background: var(--c-border); border-radius: 2px; }
+
+.carrousel-thumb {
+  flex: 0 0 auto;
+  width: calc(var(--c-strip-h) * 16 / 9);
+  height: var(--c-strip-h);
+  border: 1px solid transparent;
+  border-radius: var(--c-radius);
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color 0.2s, opacity 0.2s;
+  opacity: 0.45;
+  background: var(--c-thumb-hover);
+}
+
+.carrousel-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.carrousel-thumb.is-active {
+  border-color: var(--c-accent);
+  opacity: 1;
+}
+
+.carrousel-thumb:hover:not(.is-active) {
+  opacity: 0.75;
+  border-color: var(--c-border);
+}
+
+/* ---------- Barre de progression auto-play ---------- */
+.carrousel-progress {
+  position: absolute;
+  bottom: 0; left: 0;
+  height: 2px;
+  width: 0%;
+  background: var(--c-accent);
+  z-index: 20;
+  transition: none;
+}
+
+.carrousel-progress.running {
+  transition: width linear;
+}
+
+/* ---------- Skeleton de chargement ---------- */
+.carrousel-skeleton {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    var(--c-bg) 25%,
+    var(--c-surface) 50%,
+    var(--c-bg) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-sweep 1.6s ease-in-out infinite;
+}
+
+@keyframes skeleton-sweep {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 600px) {
+  :root {
+    --c-btn-size: 32px;
+    --c-strip-h: 56px;
+  }
+
+  .carrousel-btn svg { width: 12px; height: 12px; }
+}

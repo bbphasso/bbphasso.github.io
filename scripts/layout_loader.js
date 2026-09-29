@@ -35,6 +35,14 @@ function loadLayout() {
       .catch(error =>
         console.error("Erreur lors du chargement des fragments (header, sidebar, footer) :", error)
       );
+      // Charger les lien id sur une page s'il y a requête (hash location)
+      if (window.location.hash) {
+          const target = document.querySelector(window.location.hash);
+          if (target) {
+              target.scrollIntoView({ behavior: 'smooth' });
+              if (target.tagName === 'DETAILS') target.open = true; // si c'est une FAQ
+          }
+      }
   }
   
   // Appelle automatiquement la fonction au chargement de la page

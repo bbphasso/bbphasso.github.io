@@ -55,7 +55,8 @@
             "Un Séminaire `Et si on travaillait ensemble ?`",
             "20 MJC, 2 soirées, une préparation au concours de l'EDSP2 et entraînements soutenances pour les stagiaires de M2"
         ],
-        "photo": "/images/Bureaux/Bureau_2023_2024.jpg"
+        "photo": "/images/Bureaux/Bureau_2023_2024.jpg",
+        "photos_carrousel": []
     },
     {
         "id": "bureau2",
@@ -115,7 +116,8 @@
             "Séminaire `Société et chercheurs : co-construire la sciende de demaine` avec Cécile Walter et Florence Francis-Oliviero",
             "23 MJC réalisés, 4 auberges espagnoles, 3 soirées, une préparation au concours de l'EDSP2 et entraînements soutenances pour les stagiaires de M2"
         ],
-        "photo": "/images/Bureaux/Bureau_2024_2025.jpg"
+        "photo": "/images/Bureaux/Bureau_2024_2025.jpg",
+        "photos_carrousel": []
     },
     {
         "id": "bureau3",
@@ -168,7 +170,21 @@
         "evenements": [
                 "En cours d'organisation"
         ],
-        "photo": "/images/Bureaux/Bureau_2025_2026.JPG"
+        "photo": "/images/Bureaux/Bureau_2025_2026.JPG",
+        "photos_carrousel": [
+            "/images/Images_carrousel/Bureau_2025_2026/Affiche_MITS_avril.png",
+            "/images/Images_carrousel/Bureau_2025_2026/50ansCASDEM_05062025_159.jpg",
+            "/images/Images_carrousel/Bureau_2025_2026/Affiche_MITS_fevrier.png",
+            "/images/Images_carrousel/Bureau_2025_2026/Affiche_MITS_mars.png",
+            "/images/Images_carrousel/Bureau_2025_2026/Auberge_espagnole.png",
+            "/images/Images_carrousel/Bureau_2025_2026/BBPH_semainre .png",
+            "/images/Images_carrousel/Bureau_2025_2026/organigramme.png",
+            "/images/Images_carrousel/Bureau_2025_2026/raclette.png",
+            "/images/Images_carrousel/Bureau_2025_2026/séminaire_2025.png",
+            "/images/Images_carrousel/Bureau_2025_2026/soiree_gala.png",
+            "/images/Images_carrousel/Bureau_2025_2026/soiree_JJC.png",
+            "/images/Images_carrousel/Bureau_2025_2026/Soirée_passation.png"
+        ]
       },
     {
         "id": "bureau4",
@@ -233,6 +249,10 @@
         "evenements": [
                 "En cours d'organisation"
         ],
-        "photo": "/images/Bureaux/Bureau_2026_2027.JPG"
+        "photo": "/images/Bureaux/Bureau_2026_2027.JPG",
+        "photos_carrousel": [
+            "/images/Images_carrousel/Bureau_2026_2027/Retour_MITS_mai_2026.png",
+            "/images/Images_carrousel/Bureau_2026_2027/Soiree_passation_2026_2027.png"
+        ]
       }
   ]

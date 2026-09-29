@@ -5,6 +5,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="/assets/css/main.css" />
+        <link rel="stylesheet" href="/assets/css/carrousel.css" />
+        <link rel="icon" type="image/png" href="/images/BBPH.png">
 	</head>
 	<body class="is-preload">
 
@@ -99,6 +101,12 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- Un div carrousel -->
+                            <div id="carrousel-section">
+
+                                <div id="mon-carrousel"></div>
+
+                            </div>
 						</div>
 					</div>
 				<!-- Sidebar -->
@@ -171,13 +179,37 @@
 									// Passer secrétariat de "single" à "bureau"
 									document.getElementById('article-secretariat').className = 'bureau';
 								}
+
+                                // =========================
+                                // CARROUSEL
+                                // =========================
+
+                                if (
+                                    office.photos_carrousel &&
+                                    Array.isArray(office.photos_carrousel) &&
+                                    office.photos_carrousel.length > 0
+                                ) {
+
+                                    createCarrousel(
+                                        '#mon-carrousel',
+                                        office.photos_carrousel
+                                    );
+
+                                } else {
+
+                                    // Cache complètement le carrousel
+                                    document.getElementById('carrousel-section').style.display = 'none';
+
+                                }
                             }
                         })
                         .catch(error => console.error('Erreur lors de la récupération du bureau:', error));
                 });
                 Block_currentpage();
             </script>
-        
+            <!-- Carrousel -->
+            <script src="/scripts/carrousel.js"></script>
+
             <!-- Les scripts JS nécessaires à la page -->
             <script src="/assets/js/jquery.min.js"></script>
             <script src="/assets/js/browser.min.js"></script>
